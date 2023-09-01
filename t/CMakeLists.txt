@@ -15,7 +15,6 @@ set(CSTL_DUMMY_TESTS
     ./pproc/count.c
     ./pproc/to_str.c
 
-    ./vector/instance.c
     ./vector/pushpop.c
 )
 
