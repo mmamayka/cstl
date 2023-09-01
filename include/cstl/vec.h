@@ -25,7 +25,7 @@
 #define cstl_vec_set(type, v, pos, val) \
     CSTL__MANGLE(cstl_vec_set, type)(v, pos, val)
 
-#define cstl_vec_pob(type, v) CSTL__MANGLE(cstl_vec_pub, type)(v)
+#define cstl_vec_pob(type, v) CSTL__MANGLE(cstl_vec_pob, type)(v)
 #define cstl_vec_rem(type, v, pos) CSTL__MANGLE(cstl_vec_rem, type)(v, pos)
 #define cstl_vec_clr(type, v) CSTL__MANGLE(cstl_vec_clr, type)(v)
 
