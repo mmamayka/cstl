@@ -2,6 +2,7 @@
 #error "CSTL vector interface instantiation: expectec VEC_TYPE defined"
 #endif /* VEC_TYPE */
 
+#include <stddef.h>
 #include <stdlib.h>
 #include <assert.h>
 
@@ -17,6 +18,8 @@
 static cstl_err_t cstl_vec__realloc(CSTL_TYPE, cstl_vec_t(CSTL_TYPE)* v, 
         size_t new_capacity) {
     assert(v != NULL);
+    assert(new_capacity != 0); // zero size realloc is implementation
+                               // defined staring with C17
     assert(new_capacity >= v->count);
 
     void* new_data = realloc(v->data, sizeof(CSTL_TYPE) * new_capacity);

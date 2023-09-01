@@ -13,6 +13,7 @@ target_include_directories(cstl-static
     PUBLIC include
     PRIVATE src/include
 )
+set_property(TARGET cstl-static PROPERTY C_STANDARD 17)
 
 enable_testing()
 add_subdirectory(t)

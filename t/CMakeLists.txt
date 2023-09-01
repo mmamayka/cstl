@@ -5,6 +5,7 @@ function(cstl_add_dummy_test SOURCE_FILE)
     add_executable(${TEST_NAME})
     target_sources(${TEST_NAME} PRIVATE ${SOURCE_FILE})
     target_link_libraries(${TEST_NAME} PRIVATE cstl::cstl-static)
+    set_property(TARGET ${TEST_NAME} PROPERTY C_STANDARD 17)
 
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endfunction(cstl_add_dummy_test)
@@ -15,6 +16,7 @@ set(CSTL_DUMMY_TESTS
     ./pproc/to_str.c
 
     ./vector/instance.c
+    ./vector/pushpop.c
 )
 
 foreach(DUMMY_TEST ${CSTL_DUMMY_TESTS})
